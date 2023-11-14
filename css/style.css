@@ -1,3 +1,18 @@
 .footer{
     text-align: center;
 }
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia;
+  }
+
+  
+  .link-icon {
+    text-decoration: none;
+    color: #444;
+    transition: 0.4s;
+  }
+  a.link-icon:hover {
+    color: rgb(48, 179, 48); /* Define a cor verde para o texto do link */
+  }

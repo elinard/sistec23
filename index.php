@@ -31,24 +31,16 @@
     <!-- Navbar content -->
     <div class="container-fluid">
       <a class="navbar-brand" href="index.php"><ion-icon name="home"></ion-icon></a>
+      <a class="navbar-brand" href="index.php"> <ion-icon name="person-add-sharp" class="mt-1"></ion-icon> Candidato</a>
+      <a class="navbar-brand" href="index.php"> <ion-icon name="briefcase-sharp"></ion-icon>  Curso</a>
+      <a class="navbar-brand" href="index.php"> Resultado</a>
       
     </div>
   </nav>
   <div class="container">
     <div class="row  mt-4">
-      <div class="col-md-4">
-        <div class="d-grid gap-2">
-          <button type="button" class="btn btn-outline-secondary btn-lg">
-            <ion-icon name="person-add-sharp"></ion-icon> Candidado
-          </button>
-        </div>
-        <div class="d-grid gap-2 mt-2">
-          <button type="button" class="btn btn-outline-secondary btn-lg">
-            <ion-icon name="briefcase-sharp"></ion-icon> Curso
-          </button>
-        </div>
-      </div>
-      <div class="col-md-8">
+
+      <div class="col-md-12">
         <table class="table">
           <thead>
             <tr>
@@ -65,14 +57,14 @@
               <td>100</td>
               <td>100</td>
               <td>200</td>
-              <td><a href="#"><ion-icon name="newspaper-outline"></ion-icon></a></td>
+              <td><a class="link-icon" href="#"><ion-icon name="newspaper-outline"></ion-icon></a></td>
             </tr>
             <tr>
               <th scope="row">Desenvolvimento de Sistemas</th>
               <td>100</td>
               <td>100</td>
               <td>200</td>
-              <td><a href="#"><ion-icon name="newspaper-outline"></ion-icon></a></td>
+              <td><a class="link-icon" href="#"><ion-icon name="newspaper-outline"></ion-icon></a></td>
             </tr>
           </tbody>
         </table>
