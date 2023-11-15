@@ -43,13 +43,14 @@ include_once("process/cad_curso.php");
             <tr>
               <th scope="row" class="align-middle"><?= $curso["nome"] ?></th>
               <td>
-                <a class="link-icon" href="#">
+                <!-- <a class="link-icon" href="#">
                   <ion-icon name="create-outline" size="large"></ion-icon>
-                </a>
-                
-                <a class="link-icon ms-3" href="#">
-                  <ion-icon name="trash-outline" size="large"></ion-icon>
-                </a>
+                </a> -->
+                <form action="process/cad_curso.php" method="POST">
+                  <input type="hidden" name="id_curso" value="<?= $curso["ID"] ?>">
+                  <input type="hidden" name="type" value="delete">
+                  <button type="submit" class="btn btn-hover" id="liveAlertBtn"><ion-icon name="trash-outline" size="large"></ion-icon></button>
+                </form>
               </td>
             </tr>
           <?php endforeach; ?>
