@@ -1,7 +1,11 @@
 <?php
 include_once('templates/header.php');
+include_once("process/cad_curso.php");
 ?>
 <div class="container">
+  <div class="col-md-12">
+    <h2>Cadastrar cursos:</h2>
+  </div>
   <div class="row mt-4">
     <div class="col-md-4" id="form-cad-curso">
       <form class="row g-3" action="process/cad_curso.php" method="POST">
@@ -35,28 +39,20 @@ include_once('templates/header.php');
           </tr>
         </thead>
         <tbody class="table-group-divider">
-          <tr>
-            <th scope="row" class="align-middle">Contabilidade</th>
-            <td>
-              <a class="link-icon" href="#">
-                <ion-icon name="create-outline" size="large"></ion-icon>
-              </a>
-              <a class="link-icon ms-3" href="#">
-                <ion-icon name="trash-outline" size="large"></ion-icon>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" class="align-middle">Desenvolvimento de Sistemas</th>
-            <td>
-              <a class="link-icon" href="#">
-                <ion-icon name="create-outline" size="large"></ion-icon>
-              </a>
-              <a class="link-icon ms-3" href="#">
-                <ion-icon name="trash-outline" size="large"></ion-icon>
-              </a>
-            </td>
-          </tr>
+          <?php foreach ($cursos as $curso) : ?>
+            <tr>
+              <th scope="row" class="align-middle"><?= $curso["nome"] ?></th>
+              <td>
+                <a class="link-icon" href="#">
+                  <ion-icon name="create-outline" size="large"></ion-icon>
+                </a>
+                
+                <a class="link-icon ms-3" href="#">
+                  <ion-icon name="trash-outline" size="large"></ion-icon>
+                </a>
+              </td>
+            </tr>
+          <?php endforeach; ?>
         </tbody>
       </table>
     </div>
