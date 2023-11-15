@@ -2,12 +2,14 @@ CREATE DATABASE sistec2023 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 USE sistec2023;
 create TABLE cursos (
-    ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(255) NOT NULL CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+    ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    sigla CHAR(3)
 );
 
+
 CREATE TABLE candidato(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     escola ENUM('Pública', 'Particular') NOT NULL CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
     bairro ENUM('sim', 'nao') NOT NULL CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
